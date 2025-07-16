@@ -1,0 +1,17 @@
+<svg width="160" height="65" viewBox="0 0 160 65" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gift Box Top Only - Shorter height -->
+  <rect x="20" y="25" width="120" height="30" fill="#00CED1" stroke="#20B2AA" stroke-width="2" rx="6"/>
+
+  <!-- Ribbon Vertical (top part) -->
+  <rect x="72.5" y="25" width="15" height="30" fill="#FFD700" stroke="#FFC107" stroke-width="1"/>
+
+  <!-- Bow -->
+  <g transform="translate(80, 15)">
+    <!-- Left bow -->
+    <ellipse cx="-12" cy="0" rx="10" ry="8" fill="#FFD700" stroke="#FFC107" stroke-width="1" transform="rotate(-15)"/>
+    <!-- Right bow -->
+    <ellipse cx="12" cy="0" rx="10" ry="8" fill="#FFD700" stroke="#FFC107" stroke-width="1" transform="rotate(15)"/>
+    <!-- Center knot -->
+    <rect x="-4" y="-4" width="8" height="8" fill="#FFC107" stroke="#FFB300" stroke-width="1" rx="2"/>
+  </g>
+</svg>
