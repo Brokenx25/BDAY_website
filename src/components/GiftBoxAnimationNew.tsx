@@ -17,17 +17,22 @@ interface GiftBoxAnimationProps {
 
 export default function GiftBoxAnimationNew({ onClick, isShaking = false }: GiftBoxAnimationProps) {
   const [state, setState] = useReducer(
-    (state: any, new_state: any) => ({
+    (state: Record<string, unknown>, new_state: Record<string, unknown>) => ({
       ...state,
       ...new_state
     }),
     init_state
   );
 
-  const { move, rotating, rotated, showConfetti } = state;
+  const { move, rotating, rotated, showConfetti } = state as {
+    move: string;
+    rotating: string;
+    rotated: string;
+    showConfetti: boolean;
+  };
 
   function animate() {
-    let isDone = rotated === "rotated" ? true : false;
+    const isDone = rotated === "rotated" ? true : false;
 
     if (!isDone) {
       setState({ rotating: "rotating" });
@@ -43,7 +48,7 @@ export default function GiftBoxAnimationNew({ onClick, isShaking = false }: Gift
     } else {
       setState(init_state);
     }
-    let moving = move === "move" ? "" : "move";
+    const moving = move === "move" ? "" : "move";
     setState({ move: moving });
   }
 

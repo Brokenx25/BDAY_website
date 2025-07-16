@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import CountdownPage from '@/components/CountdownPage';
-import WaitingScreen from '@/components/WaitingScreen';
 import BirthdayCard from '@/components/BirthdayCard';
 
 export default function Home() {

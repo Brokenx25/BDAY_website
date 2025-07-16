@@ -86,15 +86,11 @@ function GiftBoxTop({ size, isOpened }: GiftBoxTopProps) {
     large: { width: 'w-44', height: 'h-12' }   // Slightly wider than bottom
   };
 
-  const lidAnimation = isOpened ? {
-    y: -30, // Move up 30px when opened
-    transition: { duration: 0.6, ease: "easeOut" }
-  } : {};
-
   return (
     <motion.div
       className={`absolute -top-2 left-1/2 transform -translate-x-1/2 ${sizeClasses[size].width} ${sizeClasses[size].height} rounded-lg`}
-      animate={lidAnimation}
+      animate={isOpened ? { y: -30 } : { y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       style={{
         transformOrigin: 'bottom center',
         background: 'linear-gradient(135deg, #8A2BE2 0%, #6A1B9A 50%, #4B0082 100%)',
@@ -205,7 +201,7 @@ export default function GiftBox({
       className={`relative ${sizeClasses[size]} cursor-pointer`}
       animate={isShaking ? shakeAnimation : continuousAnimation}
       whileHover={hoverAnimation}
-      onClick={onClick}
+      onClick={handleClick}
     >
       {/* Gift Box Container */}
       <div className="relative w-full h-full">
