@@ -106,10 +106,10 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
       )}
 
       {/* Control Buttons */}
-      <div className="fixed top-4 right-4 flex flex-col gap-2 z-50">
+      <div className="fixed top-2 right-2 sm:top-4 sm:right-4 flex flex-col gap-2 z-50">
         <motion.button
           onClick={toggleMusic}
-          className="p-3 rounded-full shadow-lg backdrop-blur-sm"
+          className="p-2 sm:p-3 rounded-full shadow-lg backdrop-blur-sm text-sm sm:text-base"
           style={{
             background: isPlaying
               ? 'linear-gradient(135deg, #667eea, #764ba2)'
@@ -124,7 +124,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
 
         <motion.button
           onClick={toggleConfetti}
-          className="p-3 rounded-full shadow-lg backdrop-blur-sm"
+          className="p-2 sm:p-3 rounded-full shadow-lg backdrop-blur-sm text-sm sm:text-base"
           style={{
             background: showConfetti
               ? 'linear-gradient(135deg, #667eea, #764ba2)'
@@ -143,7 +143,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
 
       {/* Left Photo Spot - Stitch Birthday */}
       <motion.div
-        className="fixed left-8 top-1/2 transform -translate-y-1/2 z-30"
+        className="fixed left-2 sm:left-4 lg:left-8 top-1/2 transform -translate-y-1/2 z-30"
         initial={{ x: -100, opacity: 0 }}
         animate={{
           x: 0,
@@ -155,7 +155,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
         }}
       >
         <div
-          className="w-56 h-64 rounded-lg border-4 border-dashed overflow-hidden"
+          className="w-24 h-28 sm:w-32 sm:h-36 md:w-40 md:h-44 lg:w-56 lg:h-64 rounded-lg border-2 sm:border-4 border-dashed overflow-hidden"
           style={{
             borderColor: '#667eea',
             background: 'rgba(255, 255, 255, 0.1)',
@@ -175,7 +175,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
 
       {/* Right Photo Spot - Stitch Balloon */}
       <motion.div
-        className="fixed right-8 top-1/2 transform -translate-y-1/2 z-30"
+        className="fixed right-2 sm:right-4 lg:right-8 top-1/2 transform -translate-y-1/2 z-30"
         initial={{ x: 100, opacity: 0 }}
         animate={{
           x: 0,
@@ -187,7 +187,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
         }}
       >
         <div
-          className="w-56 h-64 rounded-lg border-4 border-dashed overflow-hidden"
+          className="w-24 h-28 sm:w-32 sm:h-36 md:w-40 md:h-44 lg:w-56 lg:h-64 rounded-lg border-2 sm:border-4 border-dashed overflow-hidden"
           style={{
             borderColor: '#764ba2',
             background: 'rgba(255, 255, 255, 0.1)',
@@ -207,7 +207,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
 
       {/* Birthday Card - Responsive size */}
       <motion.div
-        className="rounded-3xl shadow-2xl p-8 md:p-12 max-w-2xl mx-4 relative overflow-hidden"
+        className="rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 lg:p-12 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl mx-2 sm:mx-4 relative overflow-hidden"
         style={{
           background: 'linear-gradient(145deg, #ffffff, #f8fafc)',
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05)'
@@ -224,59 +224,59 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
         {/* Spiral Flower Border Decoration */}
         <div className="absolute inset-0 pointer-events-none">
           {/* Top Left Corner Spiral */}
-          <div className="absolute top-4 left-4">
+          <div className="absolute top-2 left-2 sm:top-4 sm:left-4">
             <motion.div
               className="relative"
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             >
-              <div className="text-2xl" style={{ color: '#667eea' }}>🌸</div>
-              <div className="absolute top-2 left-2 text-lg" style={{ color: '#764ba2' }}>🌺</div>
-              <div className="absolute top-4 left-1 text-sm" style={{ color: '#f093fb' }}>🌼</div>
+              <div className="text-lg sm:text-2xl" style={{ color: '#667eea' }}>🌸</div>
+              <div className="absolute top-1 left-1 sm:top-2 sm:left-2 text-sm sm:text-lg" style={{ color: '#764ba2' }}>🌺</div>
+              <div className="absolute top-2 left-0 sm:top-4 sm:left-1 text-xs sm:text-sm" style={{ color: '#f093fb' }}>🌼</div>
             </motion.div>
           </div>
 
           {/* Top Right Corner Spiral */}
-          <div className="absolute top-4 right-4">
+          <div className="absolute top-2 right-2 sm:top-4 sm:right-4">
             <motion.div
               className="relative"
               animate={{ rotate: -360 }}
               transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
             >
-              <div className="text-2xl" style={{ color: '#764ba2' }}>🌹</div>
-              <div className="absolute top-2 right-2 text-lg" style={{ color: '#667eea' }}>🌸</div>
-              <div className="absolute top-4 right-1 text-sm" style={{ color: '#f093fb' }}>🌺</div>
+              <div className="text-lg sm:text-2xl" style={{ color: '#764ba2' }}>🌹</div>
+              <div className="absolute top-1 right-1 sm:top-2 sm:right-2 text-sm sm:text-lg" style={{ color: '#667eea' }}>🌸</div>
+              <div className="absolute top-2 right-0 sm:top-4 sm:right-1 text-xs sm:text-sm" style={{ color: '#f093fb' }}>🌺</div>
             </motion.div>
           </div>
 
           {/* Bottom Left Corner Spiral */}
-          <div className="absolute bottom-4 left-4">
+          <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4">
             <motion.div
               className="relative"
               animate={{ rotate: 360 }}
               transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
             >
-              <div className="text-2xl" style={{ color: '#f5576c' }}>🌻</div>
-              <div className="absolute bottom-2 left-2 text-lg" style={{ color: '#667eea' }}>🌼</div>
-              <div className="absolute bottom-4 left-1 text-sm" style={{ color: '#764ba2' }}>🌸</div>
+              <div className="text-lg sm:text-2xl" style={{ color: '#f5576c' }}>🌻</div>
+              <div className="absolute bottom-1 left-1 sm:bottom-2 sm:left-2 text-sm sm:text-lg" style={{ color: '#667eea' }}>🌼</div>
+              <div className="absolute bottom-2 left-0 sm:bottom-4 sm:left-1 text-xs sm:text-sm" style={{ color: '#764ba2' }}>🌸</div>
             </motion.div>
           </div>
 
           {/* Bottom Right Corner Spiral */}
-          <div className="absolute bottom-4 right-4">
+          <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4">
             <motion.div
               className="relative"
               animate={{ rotate: -360 }}
               transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
             >
-              <div className="text-2xl" style={{ color: '#f093fb' }}>🌺</div>
-              <div className="absolute bottom-2 right-2 text-lg" style={{ color: '#f5576c' }}>🌹</div>
-              <div className="absolute bottom-4 right-1 text-sm" style={{ color: '#667eea' }}>🌻</div>
+              <div className="text-lg sm:text-2xl" style={{ color: '#f093fb' }}>🌺</div>
+              <div className="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 text-sm sm:text-lg" style={{ color: '#f5576c' }}>🌹</div>
+              <div className="absolute bottom-2 right-0 sm:bottom-4 sm:right-1 text-xs sm:text-sm" style={{ color: '#667eea' }}>🌻</div>
             </motion.div>
           </div>
 
           {/* Side Decorations */}
-          <div className="absolute top-1/4 left-2">
+          <div className="absolute top-1/4 left-1 sm:left-2">
             <motion.div
               animate={{
                 rotate: [0, 15, -15, 0],
@@ -284,11 +284,11 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
               }}
               transition={{ duration: 4, repeat: Infinity }}
             >
-              <div className="text-xl" style={{ color: '#667eea' }}>🌸</div>
+              <div className="text-lg sm:text-xl" style={{ color: '#667eea' }}>🌸</div>
             </motion.div>
           </div>
 
-          <div className="absolute top-1/4 right-2">
+          <div className="absolute top-1/4 right-1 sm:right-2">
             <motion.div
               animate={{
                 rotate: [0, -15, 15, 0],
@@ -296,11 +296,11 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
               }}
               transition={{ duration: 4, repeat: Infinity, delay: 2 }}
             >
-              <div className="text-xl" style={{ color: '#764ba2' }}>🌺</div>
+              <div className="text-lg sm:text-xl" style={{ color: '#764ba2' }}>🌺</div>
             </motion.div>
           </div>
 
-          <div className="absolute bottom-1/4 left-2">
+          <div className="absolute bottom-1/4 left-1 sm:left-2">
             <motion.div
               animate={{
                 rotate: [0, 20, -20, 0],
@@ -308,11 +308,11 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
               }}
               transition={{ duration: 5, repeat: Infinity, delay: 1 }}
             >
-              <div className="text-xl" style={{ color: '#f093fb' }}>🌹</div>
+              <div className="text-lg sm:text-xl" style={{ color: '#f093fb' }}>🌹</div>
             </motion.div>
           </div>
 
-          <div className="absolute bottom-1/4 right-2">
+          <div className="absolute bottom-1/4 right-1 sm:right-2">
             <motion.div
               animate={{
                 rotate: [0, -20, 20, 0],
@@ -320,7 +320,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
               }}
               transition={{ duration: 5, repeat: Infinity, delay: 3 }}
             >
-              <div className="text-xl" style={{ color: '#f5576c' }}>🌼</div>
+              <div className="text-lg sm:text-xl" style={{ color: '#f5576c' }}>🌼</div>
             </motion.div>
           </div>
         </div>
@@ -329,7 +329,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
         <div className="relative z-10 text-center">
           {/* Title - Made smaller */}
           <motion.h1
-            className="text-4xl md:text-6xl font-bold mb-24"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-12 sm:mb-16 md:mb-20 lg:mb-24"
             style={{
               background: 'linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c)',
               WebkitBackgroundClip: 'text',
@@ -346,14 +346,14 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
 
           {/* Cake Illustration - Even lower to avoid overlap */}
           <motion.div
-            className="flex justify-center mb-12 mt-24"
+            className="flex justify-center mb-8 sm:mb-10 md:mb-12 mt-12 sm:mt-16 md:mt-20 lg:mt-24"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.6, type: "spring", stiffness: 200 }}
           >
             <div className="relative">
               {/* Cake Base - Enhanced with more layers and decorations */}
-              <div className="w-40 h-24 rounded-lg relative" style={{
+              <div className="w-32 h-20 sm:w-36 sm:h-22 md:w-40 md:h-24 rounded-lg relative" style={{
                 background: 'linear-gradient(180deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%)',
                 boxShadow: '0 8px 16px rgba(100, 116, 139, 0.3), inset 0 2px 4px rgba(248, 250, 252, 0.3)'
               }}>
@@ -589,13 +589,13 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
 
           {/* Heartfelt Message */}
           <motion.div
-            className="text-center mb-8 px-4"
+            className="text-center mb-6 sm:mb-8 px-2 sm:px-4"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.8 }}
           >
             <p
-              className="text-base md:text-lg mb-4 leading-relaxed"
+              className="text-sm sm:text-base md:text-lg mb-3 sm:mb-4 leading-relaxed"
               style={{
                 background: 'linear-gradient(45deg, #667eea, #764ba2)',
                 WebkitBackgroundClip: 'text',
@@ -607,7 +607,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
               Happy birthday to one of the brightest souls I know. 🎉 Today marks 22 years of your existence, and I just want to say how grateful I am that you&apos;re here, bringing light and joy into the lives of everyone around you.
             </p>
             <p
-              className="text-base md:text-lg mb-4 leading-relaxed"
+              className="text-sm sm:text-base md:text-lg mb-3 sm:mb-4 leading-relaxed"
               style={{
                 background: 'linear-gradient(45deg, #f093fb, #f5576c, #4facfe)',
                 WebkitBackgroundClip: 'text',
@@ -620,7 +620,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
               You&apos;ve survived and thrived through every challenge – including the day when you drop your pen into that impossibly tiny gap and suddenly question your entire life&apos;s choices – always doing your best, and I admire you so deeply for that.
             </p>
             <p
-              className="text-base md:text-lg leading-relaxed"
+              className="text-sm sm:text-base md:text-lg leading-relaxed"
               style={{
                 background: 'linear-gradient(45deg, #667eea, #764ba2, #f093fb)',
                 WebkitBackgroundClip: 'text',
@@ -636,7 +636,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
 
           {/* Decorative Elements - Now with blinking */}
           <motion.div
-            className="flex justify-center gap-4 text-4xl"
+            className="flex justify-center gap-2 sm:gap-3 md:gap-4 text-2xl sm:text-3xl md:text-4xl"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 1.2, type: "spring", stiffness: 200 }}
