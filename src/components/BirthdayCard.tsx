@@ -353,7 +353,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
           >
             <div className="relative">
               {/* Cake Base - Enhanced with more layers and decorations */}
-              <div className="w-32 h-20 sm:w-36 sm:h-22 md:w-40 md:h-24 rounded-lg relative" style={{
+              <div className="w-24 h-16 sm:w-32 sm:h-20 md:w-36 md:h-22 lg:w-40 lg:h-24 rounded-lg relative" style={{
                 background: 'linear-gradient(180deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%)',
                 boxShadow: '0 8px 16px rgba(100, 116, 139, 0.3), inset 0 2px 4px rgba(248, 250, 252, 0.3)'
               }}>
@@ -372,16 +372,16 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
                 }}></div>
 
                 {/* Decorative dots on cake */}
-                <div className="absolute top-2 left-4 w-2 h-2 rounded-full" style={{ background: '#f5576c' }}></div>
-                <div className="absolute top-4 right-6 w-1.5 h-1.5 rounded-full" style={{ background: '#f093fb' }}></div>
-                <div className="absolute bottom-3 left-6 w-1.5 h-1.5 rounded-full" style={{ background: '#667eea' }}></div>
-                <div className="absolute bottom-2 right-4 w-2 h-2 rounded-full" style={{ background: '#764ba2' }}></div>
+                <div className="absolute top-1 left-2 sm:top-2 sm:left-4 w-1 h-1 sm:w-2 sm:h-2 rounded-full" style={{ background: '#f5576c' }}></div>
+                <div className="absolute top-2 right-3 sm:top-4 sm:right-6 w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full" style={{ background: '#f093fb' }}></div>
+                <div className="absolute bottom-2 left-3 sm:bottom-3 sm:left-6 w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full" style={{ background: '#667eea' }}></div>
+                <div className="absolute bottom-1 right-2 sm:bottom-2 sm:right-4 w-1 h-1 sm:w-2 sm:h-2 rounded-full" style={{ background: '#764ba2' }}></div>
 
                 {/* More Candles for 22nd Birthday */}
-                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 flex gap-1">
+                <div className="absolute -top-8 sm:-top-10 left-1/2 transform -translate-x-1/2 flex gap-0.5 sm:gap-1">
                   {/* Candle 1 */}
                   <div className="relative">
-                    <div className="w-3 h-12 relative">
+                    <div className="w-2 h-8 sm:w-3 sm:h-12 relative">
                       <div
                         className="w-full h-full rounded-sm"
                         style={{
@@ -400,7 +400,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
                       </div>
                     </div>
                     <motion.div
-                      className="absolute -top-7 left-1/2 transform -translate-x-1/2 w-2 h-7"
+                      className="absolute -top-5 sm:-top-7 left-1/2 transform -translate-x-1/2 w-1.5 h-5 sm:w-2 sm:h-7"
                       style={{
                         background: 'linear-gradient(180deg, #FFD700 0%, #FF8C00 25%, #FF6B35 60%, #FF4500 100%)',
                         borderRadius: '50% 50% 50% 50% / 85% 85% 15% 15%',
@@ -421,7 +421,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
 
                   {/* Candle 2 */}
                   <div className="relative">
-                    <div className="w-3 h-12 relative">
+                    <div className="w-2 h-8 sm:w-3 sm:h-12 relative">
                       <div
                         className="w-full h-full rounded-sm"
                         style={{
@@ -440,7 +440,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
                       </div>
                     </div>
                     <motion.div
-                      className="absolute -top-7 left-1/2 transform -translate-x-1/2 w-2 h-7"
+                      className="absolute -top-5 sm:-top-7 left-1/2 transform -translate-x-1/2 w-1.5 h-5 sm:w-2 sm:h-7"
                       style={{
                         background: 'linear-gradient(180deg, #FFD700 0%, #FF8C00 25%, #FF6B35 60%, #FF4500 100%)',
                         borderRadius: '50% 50% 50% 50% / 85% 85% 15% 15%',
@@ -462,7 +462,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
 
                   {/* Candle 3 */}
                   <div className="relative">
-                    <div className="w-3 h-12 relative">
+                    <div className="w-2 h-8 sm:w-3 sm:h-12 relative">
                       <div
                         className="w-full h-full rounded-sm"
                         style={{
@@ -481,7 +481,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
                       </div>
                     </div>
                     <motion.div
-                      className="absolute -top-7 left-1/2 transform -translate-x-1/2 w-2 h-7"
+                      className="absolute -top-5 sm:-top-7 left-1/2 transform -translate-x-1/2 w-1.5 h-5 sm:w-2 sm:h-7"
                       style={{
                         background: 'linear-gradient(180deg, #FFD700 0%, #FF8C00 25%, #FF6B35 60%, #FF4500 100%)',
                         borderRadius: '50% 50% 50% 50% / 85% 85% 15% 15%',
@@ -503,7 +503,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
 
                   {/* Candle 4 */}
                   <div className="relative">
-                    <div className="w-3 h-12 relative">
+                    <div className="w-2 h-8 sm:w-3 sm:h-12 relative">
                       <div
                         className="w-full h-full rounded-sm"
                         style={{
@@ -522,7 +522,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
                       </div>
                     </div>
                     <motion.div
-                      className="absolute -top-7 left-1/2 transform -translate-x-1/2 w-2 h-7"
+                      className="absolute -top-5 sm:-top-7 left-1/2 transform -translate-x-1/2 w-1.5 h-5 sm:w-2 sm:h-7"
                       style={{
                         background: 'linear-gradient(180deg, #FFD700 0%, #FF8C00 25%, #FF6B35 60%, #FF4500 100%)',
                         borderRadius: '50% 50% 50% 50% / 85% 85% 15% 15%',
@@ -544,7 +544,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
 
                   {/* Candle 5 */}
                   <div className="relative">
-                    <div className="w-3 h-12 relative">
+                    <div className="w-2 h-8 sm:w-3 sm:h-12 relative">
                       <div
                         className="w-full h-full rounded-sm"
                         style={{
@@ -563,7 +563,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
                       </div>
                     </div>
                     <motion.div
-                      className="absolute -top-7 left-1/2 transform -translate-x-1/2 w-2 h-7"
+                      className="absolute -top-5 sm:-top-7 left-1/2 transform -translate-x-1/2 w-1.5 h-5 sm:w-2 sm:h-7"
                       style={{
                         background: 'linear-gradient(180deg, #FFD700 0%, #FF8C00 25%, #FF6B35 60%, #FF4500 100%)',
                         borderRadius: '50% 50% 50% 50% / 85% 85% 15% 15%',
