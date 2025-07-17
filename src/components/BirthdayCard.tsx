@@ -143,7 +143,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
 
       {/* Left Photo Spot - Stitch Birthday */}
       <motion.div
-        className="fixed left-2 sm:left-4 lg:left-8 top-1/2 transform -translate-y-1/2 z-30"
+        className="fixed left-2 sm:left-4 lg:left-8 bottom-4 sm:top-1/2 transform sm:-translate-y-1/2 z-30"
         initial={{ x: -100, opacity: 0 }}
         animate={{
           x: 0,
@@ -175,7 +175,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
 
       {/* Right Photo Spot - Stitch Balloon */}
       <motion.div
-        className="fixed right-2 sm:right-4 lg:right-8 top-1/2 transform -translate-y-1/2 z-30"
+        className="fixed right-2 sm:right-4 lg:right-8 bottom-4 sm:top-1/2 transform sm:-translate-y-1/2 z-30"
         initial={{ x: 100, opacity: 0 }}
         animate={{
           x: 0,

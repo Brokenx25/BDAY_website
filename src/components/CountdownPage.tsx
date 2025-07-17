@@ -93,9 +93,9 @@ export default function CountdownPage({ onComplete, backgroundGif }: CountdownPa
           </motion.div>
         )}
 
-        {/* Timer - moves higher above gift box and character, blinks slowly when ended */}
+        {/* Timer - moves higher above gift box and character, blinks slowly when ended - Hidden on small devices */}
         <motion.div
-          className={`${timerEnded ? 'fixed' : 'relative'} z-20`}
+          className={`${timerEnded ? 'fixed' : 'relative'} z-20 hidden sm:block`}
           initial={{ opacity: 0, y: -50 }}
           animate={{
             opacity: timerEnded ? [1, 0.2, 1] : 1,
