@@ -604,7 +604,7 @@ export default function BirthdayCard({ backgroundGif }: BirthdayCardProps = {}) 
                 fontFamily: 'Frolicsome, cursive'
               }}
             >
-              Happy birthday to one of the brightest souls I know. 🎉 Today marks 22 (or 23, I forgot sry lol) years of your existence, and I just want to say how grateful I am that you&apos;re here, bringing light and joy into the lives of everyone around you.
+              Happy birthday to one of the brightest souls I know. 🎉 Today marks 23 years of your existence, and I just want to say how grateful I am that you&apos;re here, bringing light and joy into the lives of everyone around you.
             </p>
             <p
               className="text-sm sm:text-base md:text-lg mb-3 sm:mb-4 leading-relaxed"
